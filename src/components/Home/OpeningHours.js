@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 
 const OpeningHours = () => {
   return (
-    <div className="bg-warning p-2 col-6">
+    <div className="bg-warning p-2">
       <h2 className="text-uppercase">Opening Hours</h2>
       <Table striped  hover size="sm">
         <thead>

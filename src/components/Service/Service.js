@@ -1,23 +1,21 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import './Service.css'
 const Service = (props) => {
   // console.log(props.course)
-  const {  name, image, fees, duration } = props.course;
+  const { name, image, fees, duration } = props.course;
   return (
     <div className="col-sm-12 col-md-6 col-lg-3">
-      <Card>
-        <Card.Img variant="top" src={image} />
+      <Card className="card-component">
+        <Card.Img variant="top" src={image} className="img-fluid" />
         <Card.Body>
-                  <Card.Title>{name}</Card.Title>
-                  <h3>Fees: {fees}</h3>
-                  <h3>Duration: {duration}</h3>
-          <Card.Text>
-            
-          </Card.Text>
+          <Card.Title>{name}</Card.Title>
+          <h5>Fees: {fees}</h5>
+          <h5>Duration: {duration}</h5>
         </Card.Body>
-        <Card.Footer>
+        {/* <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
+        </Card.Footer> */}
       </Card>
     </div>
   );
