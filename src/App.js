@@ -42,4 +42,3 @@ function App() {
 export default App;
 
 
-// https://github.com/ProgrammingHeroWC4/review-website-kawsarm104.git

@@ -12,11 +12,11 @@ const [courses] = useCourses();
         <h1>{courses.length} Courses Available</h1>
 
         {/* Showing in services page  */}
+        
         {courses.map((course) => (
           <Service key={course.id} course={course}></Service>
         ))}
       </div>
-
     </>
   );
 };

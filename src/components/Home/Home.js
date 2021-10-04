@@ -10,7 +10,7 @@ import RegisterNow from "./RegisterNow/RegisterNow";
 // import SliceData from "./SliceData/SliceData";
 import Slider from "./Slider/Slider";
 const Home = () => {
-  const [courses] = useCourses()
+  const [courses] = useCourses();
   return (
     <>
       <Slider></Slider>
@@ -28,14 +28,15 @@ const Home = () => {
         </Row>
       </Container>
       {/* Showing only 4 cards in homepage  */}
-      <div className="row">
+
+      <div className="row container-fluid">
+        <h1 className="">Our Courses </h1>
         {courses.slice(0, 4).map((course) => (
           <Service key={course.id} course={course}></Service>
         ))}
       </div>
       {/* Showing register now  */}
       <RegisterNow></RegisterNow>
-      <h1>{courses.length}</h1>
     </>
   );
 };

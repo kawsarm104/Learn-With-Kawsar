@@ -1,3 +1,9 @@
-.register-now{
-    background-color: antiquewhite;
+
+.next-course{
+  margin-top: 150px;
+  /* display: block; */
+}
+.next-course h2{
+  font-size: 5rem;
+
 }
