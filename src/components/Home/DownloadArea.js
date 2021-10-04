@@ -6,10 +6,10 @@ const DownloadArea = () => {
     <div className="bg-info p-2">
       <h2 className="text-uppercase">download area</h2>
       <p>
-        Lorem ipsum dolor sit amet, <br />
-        consectetur adipiscing elit. Aenean egestas magna.
+        All the course content and <br />
+        syllabus will be here soon.
       </p>
-      <button type="button" className="btn btn-outline-light mt-4">
+      <button type="button" className="btn btn-outline-light mt-4 mb-4">
         Show More
       </button>
     </div>

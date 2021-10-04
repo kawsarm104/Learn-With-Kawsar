@@ -6,7 +6,7 @@ import Service from "../Service/Service";
 import DownloadArea from "./DownloadArea";
 import FindCourse from "./FindCourse";
 import OpeningHours from "./OpeningHours";
-import RegisterNow from "./RegisterNow/RegisterNow";
+// import RegisterNow from "./RegisterNow/RegisterNow";
 // import SliceData from "./SliceData/SliceData";
 import Slider from "./Slider/Slider";
 const Home = () => {
@@ -36,7 +36,7 @@ const Home = () => {
         ))}
       </div>
       {/* Showing register now  */}
-      <RegisterNow></RegisterNow>
+      {/* <RegisterNow></RegisterNow> */}
     </>
   );
 };

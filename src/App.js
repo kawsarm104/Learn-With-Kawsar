@@ -5,6 +5,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+// import Slider from "./components/Home/Slider/Slider";
 import NotFound from "./components/NotFound/NotFound";
 import Services from "./components/Service/Services";
 
@@ -14,6 +15,7 @@ function App() {
        
       <Router>
         <Header></Header>
+        
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -31,6 +33,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        {/* <Slider/> */}
         <Footer></Footer>
       </Router>
    
