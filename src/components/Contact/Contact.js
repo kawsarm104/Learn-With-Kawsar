@@ -47,7 +47,7 @@ const Contact = () => {
 
             <Button
               // variant="light"
-              className="btn btn-outline-light border text-dark mt-3"
+              className="btn btn-outline-info border text-dark mt-3"
               type="submit"
             >
               Submit
