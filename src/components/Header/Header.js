@@ -14,14 +14,16 @@ const Header = () => {
       className="p-3 "
     >
       <Container fluid>
-        <Navbar.Brand to="/">Learn with Kawsar</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Learn with Kawsar
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            
+
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
