@@ -1,0 +1,61 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "C Programming Language",
+      "image": "https://mk0setscholarsn9sko6.kinstacdn.com/wp-content/uploads/2020/07/C-Programming.jpg",
+      "fees": "2000",
+      "duration": "2 Month"
+    },
+
+    {
+      "id": "2",
+      "name": "Java Programming Language",
+      "image": "https://4a7efb2d53317100f611-1d7064c4f7b6de25658a4199efb34975.ssl.cf1.rackcdn.com/java-emergency-upgrade-installers-showcase_image-2-p-2057.jpg",
+      "fees": "3000",
+      "duration": "3 Month"
+    },
+    {
+      "id": "3",
+      "name": "Python Programming Language",
+      "image": "http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/06/Python-Programming-Edureka.png",
+      "fees": "3000",
+      "duration": "3 Month"
+    },
+    {
+      "id": "4",
+      "name": "Javascript Programming Language",
+      "image": "https://www.tutorialrepublic.com/lib/images/javascript-illustration.png",
+      "fees": "3000",
+      "duration": "3 Month"
+    },
+    {
+      "id": "5",
+      "name": "Machine Learning",
+      "image": "https://www.eurixgroup.com/wp-content/uploads/2021/01/ml-e1610553826718.jpg",
+      "fees": "5000",
+      "duration": "4 Month"
+    },
+    {
+      "id": "6",
+      "name": "Artificial Intelligence",
+      "image": "https://www.projectwale.com/wp-content/uploads/2020/05/artificial-intelligence-1024x576.jpg",
+      "fees": "5000",
+      "duration": "4 Month"
+    },
+    {
+      "id": "7",
+      "name": "Computer Networks",
+      "image": "https://bournetocode.com/projects/GCSE_Computing_Fundamentals/pages/img/computer-network.jpg",
+      "fees": "4000",
+      "duration": "3 Month"
+    },
+    {
+      "id": "8",
+      "name": "Data Structure and Algorithm",
+      "image": "https://miro.medium.com/max/2560/1*sMryEXZVPKFjGNcfSzE8Mw.jpeg",
+      "fees": "4000",
+      "duration": "3 Month"
+    }
+  ]
+}
