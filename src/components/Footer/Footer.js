@@ -27,7 +27,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col sm={12} md={4} className="   ">
-            <h3>Learn with kawsar</h3>
+            <h3>Learn with Kawsar</h3>
             <p>
               Hey!! Dont waste more time ..LIfe is short if you want to earn
               something valueable then just enroll on the Course you like
