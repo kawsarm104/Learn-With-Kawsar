@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useCourses from "../../Hooks/useCourses";
+
 import Service from "./Service";
 
 const Services = () => {
-  const [courses, setCourses] = useState([]);
-  // console.log("tui to kaj kor")
-
-  useEffect(() => {
-    //   fetching fake data
-    fetch("./fakedata.JSON")
-      .then((res) => res.json())
-      .then((data) => {
-        setCourses(data.courses);
-      });
-  }, []);
+const [courses] = useCourses();
+  // console.log("line 11",courses)
   return (
-    <div className="container-fluid row ">
-      <h1>{courses.length} results</h1>
-      {courses.map((course) => (
-        <Service key={course.id} course={course}></Service>
-      ))}
-    </div>
+    <>
+      <div className="container-fluid row">
+        <h1>{courses.length} Courses Available</h1>
+
+        {/* Showing in services page  */}
+        {courses.map((course) => (
+          <Service key={course.id} course={course}></Service>
+        ))}
+      </div>
+
+    </>
   );
 };
 

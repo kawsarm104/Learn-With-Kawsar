@@ -1,38 +1,41 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import useCourses from "../../Hooks/useCourses";
+import Service from "../Service/Service";
+// import Service from "../Service/Service";
 import DownloadArea from "./DownloadArea";
 import FindCourse from "./FindCourse";
 import OpeningHours from "./OpeningHours";
+import RegisterNow from "./RegisterNow/RegisterNow";
+// import SliceData from "./SliceData/SliceData";
 import Slider from "./Slider/Slider";
 const Home = () => {
+  const [courses] = useCourses()
   return (
     <>
       <Slider></Slider>
-      <Container className="">
+      <Container className=" mb-5">
         <Row>
-          <Col  sm={12} md={4} >
+          <Col sm={12} md={4}>
             <DownloadArea></DownloadArea>
           </Col>
-          <Col  sm={12} md={4}>
+          <Col sm={12} md={4}>
             <OpeningHours></OpeningHours>
           </Col>
-          <Col  sm={12} md={4}>
+          <Col sm={12} md={4}>
             <FindCourse></FindCourse>
           </Col>
         </Row>
       </Container>
-
-      {/* <div className="container row  mb-1">
-        <div className="col-8">
-          <div className="d-flex ">
-            <DownloadArea></DownloadArea>
-            <OpeningHours></OpeningHours>
-          </div>
-        </div>
-        <div className="col-4 ">
-          <FindCourse></FindCourse>
-        </div>
-      </div> */}
+      {/* Showing only 4 cards in homepage  */}
+      <div className="row">
+        {courses.slice(0, 4).map((course) => (
+          <Service key={course.id} course={course}></Service>
+        ))}
+      </div>
+      {/* Showing register now  */}
+      <RegisterNow></RegisterNow>
+      <h1>{courses.length}</h1>
     </>
   );
 };

@@ -6,7 +6,7 @@ const Service = (props) => {
   const { name, image, fees, duration } = props.course;
   return (
     <div className="col-sm-12 col-md-6 col-lg-3">
-      <Card className="card-component">
+      <Card className="card-component shadow">
         <Card.Img variant="top" src={image} className="img-fluid" />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
