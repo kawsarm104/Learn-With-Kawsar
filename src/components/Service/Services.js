@@ -9,7 +9,7 @@ const [courses] = useCourses();
   return (
     <>
       <div className="container-fluid row">
-        <h1>{courses.length} Courses Available</h1>
+        <h1  className="mt-3 mb-3">{courses.length} Courses Available</h1>
 
         {/* Showing in services page  */}
         
