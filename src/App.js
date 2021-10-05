@@ -11,7 +11,7 @@ import Services from "./components/Service/Services";
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
        
       <Router>
         <Header></Header>

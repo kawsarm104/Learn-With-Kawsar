@@ -1,5 +1,5 @@
-.card-component{
-    height: 390px;
-    /* background-color: red; */
-    margin-bottom: 20px;
+.card-footer{
+    border: none;
+    box-shadow: none;
+    background-color: white;
 }

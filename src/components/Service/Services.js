@@ -8,8 +8,8 @@ const [courses] = useCourses();
   // console.log("line 11",courses)
   return (
     <>
-      <div className="container-fluid row">
-        <h1  className="mt-3 mb-3">{courses.length} Courses Available</h1>
+      <div className="container-fluid row  mt-3 mx-auto">
+        <h1  className=" mb-3">{courses.length} Courses Available</h1>  
 
         {/* Showing in services page  */}
         

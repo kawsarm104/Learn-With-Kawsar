@@ -7,12 +7,11 @@ const Footer = () => {
     <div>
       <Container
         fluid
-        className="mt-3 g-3  p-4 "
+        className="mt-3 g-3  p-4 col-container"
         style={{
           backgroundColor: "#282d32",
           color: "#f0f9ff",
-          position: "sticky",
-          bottom: "0",
+             
         }}
         sticky="bottom"
       >
