@@ -8,7 +8,13 @@ const Footer = () => {
       <Container
         fluid
         className="mt-3 g-3  p-4 "
-        style={{ backgroundColor: "#282d32", color: "#f0f9ff" }}
+        style={{
+          backgroundColor: "#282d32",
+          color: "#f0f9ff",
+          position: "sticky",
+          bottom: "0",
+        }}
+        sticky="bottom"
       >
         <Row>
           <Col sm={12} md={4} className=" ">

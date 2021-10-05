@@ -14,10 +14,12 @@ const Service = (props) => {
           <h5>Fees: {fees}</h5>
           <h5>Duration: {duration}</h5>
         </Card.Body>
-        <Button variant="" className="btn btn-outline-info text-dark">View Details</Button>
-        {/* <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer> */}
+
+        <Card.Footer className="d-flex justify-content-end">
+          <Button variant="" className="btn btn-outline-info text-dark">
+            View Details
+          </Button>
+        </Card.Footer>
       </Card>
     </div>
   );
