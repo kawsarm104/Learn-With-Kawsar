@@ -15,11 +15,11 @@ const Home = () => {
     <>
       <Slider></Slider>
       <Container className=" mb-5">
-        <Row>
-          <Col sm={12} md={4}>
+        <Row className="">
+          <Col sm={12} md={4} className="bg-info p-2 ">
             <DownloadArea></DownloadArea>
           </Col>
-          <Col sm={12} md={4}>
+          <Col sm={12} md={4} className="bg-warning p-2">
             <OpeningHours></OpeningHours>
           </Col>
           <Col sm={12} md={4}>

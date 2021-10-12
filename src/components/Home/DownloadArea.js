@@ -2,7 +2,7 @@ import React from "react";
 
 const DownloadArea = () => {
   return (
-    <div className="bg-info p-2">
+    <div className="">
       <h2 className="text-uppercase">download area</h2>
       <p>
         All the course content and <br />

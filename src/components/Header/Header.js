@@ -8,12 +8,16 @@ const Header = () => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="light"
-      variant="light"
+      // bg="light"
+      variant="dark"
       sticky="top"
       className="p-3 "
+      style={{
+        backgroundColor: "#5c08e0",
+        color: "#ffffff",
+      }}
     >
-      <Container fluid>
+      <Container fluid className="">
         <Navbar.Brand as={Link} to="/">
           Learn with Kawsar
         </Navbar.Brand>
