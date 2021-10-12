@@ -4,15 +4,11 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="footer-class mt-4">
       <Container
         fluid
-        className="mt-3 g-3  p-4 col-container "
-        style={{
-          backgroundColor: "#5c08e0",
-          color: "#ffffff",
-        }}
-        sticky="bottom"
+        className="mt-auto g-3  p-4 col-container "
+        // sticky="bottom"
       >
         <Row>
           <Col sm={12} md={4} className=" ">

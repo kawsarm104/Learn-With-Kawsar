@@ -29,7 +29,7 @@ const Home = () => {
       </Container>
       {/* Showing only 4 cards in homepage  */}
 
-      <div className="row container-fluid mx-auto">
+      <div className="row container-fluid mx-auto ">
         <h1 className="">Our Courses </h1>
         {courses.slice(0, 4).map((course) => (
           <Service key={course.id} course={course}></Service>
