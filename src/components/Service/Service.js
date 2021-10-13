@@ -15,10 +15,16 @@ const Service = (props) => {
           <h5>Duration: {duration}</h5>
         </Card.Body>
 
-        <Card.Footer className="d-flex justify-content-end card-footer">
+        <Card.Footer className="card-footer">
           <Button
             variant=""
-            className="btn btn-outline-info text-dark button-style"
+            className="btn btn-outline-warning text-dark button-style w-100"
+          >
+            Add to Cart
+          </Button>
+          <Button
+            variant=""
+            className="btn btn-outline-info text-dark button-style w-100 mt-2"
           >
             View Details
           </Button>
