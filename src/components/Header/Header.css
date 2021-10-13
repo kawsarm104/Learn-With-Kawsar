@@ -1,0 +1,12 @@
+.navbar-container {
+  background-color: #5c08e0;
+  /* color: blueviolet; */
+}
+.nav-container {
+  color: #ffffff;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.nav-container:hover {
+  color: #080808;
+}

@@ -1,42 +1,61 @@
 import React from "react";
 // import Navbar from "react-bootstrap/Navbar";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
+  const activeStyle = { color: "#fa00e5" };
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      // bg="light"
-      variant="dark"
+      // bg="dark"
+      variant=""
       sticky="top"
-      className="p-3 "
-      style={{
-        backgroundColor: "#5c08e0",
-        color: "#ffffff",
-      }}
+      className="p-3 navbar-container "
     >
       <Container fluid className="">
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand
+          as={Link}
+          activeStyle={activeStyle}
+          className="nav-container"
+          to="/"
+        >
           Learn with Kawsar
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/home">
+          <Nav className="ms-auto nav-container">
+            <NavLink
+              activeStyle={activeStyle}
+              className="nav-container"
+              to="/home"
+            >
               Home
-            </Nav.Link>
+            </NavLink>
 
-            <Nav.Link as={Link} to="/about">
+            <NavLink
+              activeStyle={activeStyle}
+              className="nav-container "
+              to="/about"
+            >
               About
-            </Nav.Link>
-            <Nav.Link as={Link} to="/services">
+            </NavLink>
+            <NavLink
+              activeStyle={activeStyle}
+              className="nav-container"
+              to="/services"
+            >
               Services
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
+            </NavLink>
+            <NavLink
+              activeStyle={activeStyle}
+              className="nav-container"
+              to="/contact"
+            >
               Contact
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
