@@ -1,12 +1,13 @@
 import Button from "@restart/ui/esm/Button";
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import "./Service.css";
 const Service = (props) => {
   // console.log(props.course)
-  const { name, image, fees, duration } = props.course;
+  const {id, name, image, fees, duration } = props.course;
   return (
-    <div className="col-sm-12 col-md-6 col-lg-3  mt-3 container-fluid " >
+    <div className="col-sm-12 col-md-6 col-lg-3  mt-3 container-fluid ">
       <Card className=" shadow h-100 m-auto ">
         <Card.Img variant="top" src={image} className="img-fluid" />
         <Card.Body className="">
@@ -22,12 +23,14 @@ const Service = (props) => {
           >
             Add to Cart
           </Button>
-          <Button
-            variant=""
-            className="btn btn-outline-info text-dark button-style w-100 mt-2"
-          >
-            View Details
-          </Button>
+          <Link to={`/service/${id}`}>
+            <Button
+              variant=""
+              className="btn btn-outline-info text-dark button-style w-100 mt-2"
+            >
+              View Details
+            </Button>
+          </Link>
         </Card.Footer>
       </Card>
     </div>

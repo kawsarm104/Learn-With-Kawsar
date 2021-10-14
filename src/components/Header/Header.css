@@ -1,12 +1,24 @@
 .navbar-container {
   background-color: #5c08e0;
-  /* color: blueviolet; */
+  /* color: rgb(49, 226, 43); */
 }
+/* .nav-toggler{
+  color: red;
+} */
 .nav-container {
   color: #ffffff;
   padding-right: 10px;
   text-decoration: none;
 }
 .nav-container:hover {
+  color: #080808;
+}
+.logout-button {
+  text-decoration: none;
+  border: none;
+  background-color: #5c08e0;
+  color: #ffffff;
+}
+.logout-button:hover {
   color: #080808;
 }

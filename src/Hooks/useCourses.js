@@ -6,10 +6,12 @@ const useCourses = () => {
 
   useEffect(() => {
     //   fetching fake data
-    fetch("./fakedata.JSON")
+    fetch("./fakedata.json")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data.courses);
+        // console.log(data,"from custom hooks")
+        // console.log(data.courses,"from custom hooks")
       });
   }, []);
   return [courses, setCourses];
