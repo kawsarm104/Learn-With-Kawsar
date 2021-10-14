@@ -65,8 +65,8 @@ const Header = () => {
 
             {user?.email ? (
               <div>
-                <Navbar.Text>
-                  Signed in as: <a href="#login">{user?.displayName}</a>
+                <Navbar.Text className="wellcome-text">
+                  Wellcome:{user?.displayName}
                 </Navbar.Text>
                 <Button
                   className="logout-button"

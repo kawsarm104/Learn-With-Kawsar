@@ -22,3 +22,7 @@
 .logout-button:hover {
   color: #080808;
 }
+.wellcome-text{
+  text-decoration: none;
+  color: #ffffff;
+}
