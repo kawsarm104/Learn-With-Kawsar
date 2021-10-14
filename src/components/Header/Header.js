@@ -14,7 +14,7 @@ const Header = () => {
       collapseOnSelect
       expand="lg"
       // bg="dark"
-      variant=""
+      variant="dark"
       sticky="top"
       className="p-3 navbar-container "
     >
