@@ -6,7 +6,8 @@ import "./Login.css";
 // import useAuth from './../../../Hooks/useAuth'
 
 const Login = () => {
-  const { signInUsingGoogle, setUser, setIsLoading } = useAuth();
+  const { signInUsingGoogle, signInUsingFacebook, setUser, setIsLoading } =
+    useAuth();
   const location = useLocation();
   const history = useHistory();
   const handleGoogleLogin = () => {
@@ -17,74 +18,85 @@ const Login = () => {
       })
       .finally(() => setIsLoading(false));
   };
+  const handleFacebookLogin = () => {
+    signInUsingFacebook()
+      .then((result) => {
+        history.push(location.state?.from || "/home");
+        setUser(result.user);
+        // console.log("facebbok user", result.user)
+      })
+      .finally(() => setIsLoading(false));
+  };
+
   // const { signInUsingGoogle } = useAuth();
   return (
     <div className="text-center login-container ">
       {/* <h2 className=" text-info  ">Please Login</h2> */}
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card border-0 shadow rounded-3 my-5">
-              <div class="card-body p-4 p-sm-5">
-                <h2 class="card-title text-center mb-5 fw-light fs-5 ">
-                  Please Sign In 
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div className="card border-0 shadow rounded-3 my-5">
+              <div className="card-body p-4 p-sm-5">
+                <h2 className="card-title text-center mb-5 fw-light fs-5 ">
+                  Please Sign In
                 </h2>
                 <>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="floatingInput"
                       placeholder="name@example.com"
                     />
-                    <label for="floatingInput">Email address</label>
+                    <label htmlFor="floatingInput">Email address</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="password"
-                      class="form-control"
+                      className="form-control"
                       id="floatingPassword"
                       placeholder="Password"
                     />
-                    <label for="floatingPassword">Password</label>
+                    <label htmlFor="floatingPassword">Password</label>
                   </div>
 
-                  <div class="form-check mb-3">
+                  <div className="form-check mb-3">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       id="rememberPasswordCheck"
                     />
-                    <label class="form-check-label" for="rememberPasswordCheck">
+                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
                       Remember password
                     </label>
                   </div>
-                  <div class="d-grid">
+                  <div className="d-grid">
                     <button
-                      class="btn btn-info btn-login text-uppercase fw-bold"
+                      className="btn btn-info btn-login text-uppercase fw-bold"
                       type="submit"
                     >
                       Sign in
                     </button>
                   </div>
-                  <hr class="my-4" />
-                  <div class="d-grid mb-2">
+                  <hr className="my-4" />
+                  <div className="d-grid mb-2">
                     <button
                       onClick={handleGoogleLogin}
-                      class="btn btn-google btn-login text-uppercase fw-bold"
+                      className="btn btn-google btn-login text-uppercase fw-bold"
                       type="submit"
                     >
-                      <i class="fab fa-google me-2"></i> Sign in with Google
+                      <i className="fab fa-google me-2"></i> Sign in with Google
                     </button>
                   </div>
-                  <div class="d-grid">
+                  <div className="d-grid">
                     <button
-                      class="btn btn-facebook btn-login text-uppercase fw-bold"
+                      onClick={handleFacebookLogin}
+                      className="btn btn-facebook btn-login text-uppercase fw-bold"
                       type="submit"
                     >
-                      <i class="fab fa-facebook-f me-2"></i> Sign in with
+                      <i className="fab fa-facebook-f me-2"></i> Sign in with
                       Facebook
                     </button>
                   </div>

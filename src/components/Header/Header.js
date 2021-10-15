@@ -8,7 +8,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useAuth();
-  const activeStyle = { color: "#fa00e5" };
+  const activeStyles = { color: "#fa00e5" };
   return (
     <Navbar
       collapseOnSelect
@@ -21,7 +21,7 @@ const Header = () => {
       <Container fluid className="">
         <Navbar.Brand
           as={Link}
-          activeStyle={activeStyle}
+          activeStyle={activeStyles}
           className="nav-container"
           to="/"
         >
@@ -34,7 +34,7 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto nav-container pe-3">
             <NavLink
-              activeStyle={activeStyle}
+              activeStyle={activeStyles}
               className="nav-container"
               to="/home"
             >
@@ -42,28 +42,28 @@ const Header = () => {
             </NavLink>
 
             <NavLink
-              activeStyle={activeStyle}
+              activeStyle={activeStyles}
               className="nav-container "
               to="/about"
             >
               About
             </NavLink>
             <NavLink
-              activeStyle={activeStyle}
+              activeStyle={activeStyles}
               className="nav-container"
               to="/services"
             >
               Services
             </NavLink>
             <NavLink
-              activeStyle={activeStyle}
+              activeStyle={activeStyles}
               className="nav-container"
               to="/contact"
             >
               Contact
             </NavLink>
 
-            {user.email ? (
+            {user? (
               <div className="">
                 <Navbar.Text className="wellcome-text">
                   Wellcome:{user?.displayName}
@@ -85,7 +85,7 @@ const Header = () => {
               </div>
             ) : (
               <NavLink
-                activeStyle={activeStyle}
+                activeStyle={activeStyles}
                 className="nav-container"
                 to="/login"
               >

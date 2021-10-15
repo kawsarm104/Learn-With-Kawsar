@@ -1,8 +1,10 @@
 import {
   getAuth,
   GoogleAuthProvider,
+  FacebookAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
+
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -16,9 +18,11 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
+  
   const signInUsingGoogle = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
+    
 
     return signInWithPopup(auth, googleProvider);
     // .then(result => {
@@ -28,6 +32,12 @@ const useFirebase = () => {
   };
 
   // observe user state change
+  const signInUsingFacebook = () => {
+    setIsLoading(true);
+    const facebookProvider = new FacebookAuthProvider();
+    return signInWithPopup(auth, facebookProvider);
+    
+  }
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -54,6 +64,7 @@ const useFirebase = () => {
     setIsLoading,
     signInUsingGoogle,
     logOut,
+    signInUsingFacebook,
   };
 };
 
