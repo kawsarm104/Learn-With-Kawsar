@@ -7,7 +7,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
 
 const Header = () => {
-  const {user,logOut} = useAuth()
+  const { user, logOut } = useAuth();
   const activeStyle = { color: "#fa00e5" };
   return (
     <Navbar
@@ -32,7 +32,7 @@ const Header = () => {
           className="nav-toggler"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto nav-container">
+          <Nav className="ms-auto nav-container pe-3">
             <NavLink
               activeStyle={activeStyle}
               className="nav-container"
@@ -63,11 +63,17 @@ const Header = () => {
               Contact
             </NavLink>
 
-            {user?.email ? (
-              <div>
+            {user.email ? (
+              <div className="">
                 <Navbar.Text className="wellcome-text">
                   Wellcome:{user?.displayName}
                 </Navbar.Text>
+                
+                <img
+                  src={user.photoURL}
+                  className="img-fluid rounded-circle user-image"
+                  alt=""
+                />
                 <Button
                   className="logout-button"
                   onClick={logOut}
@@ -75,6 +81,7 @@ const Header = () => {
                 >
                   Logout
                 </Button>
+                
               </div>
             ) : (
               <NavLink
