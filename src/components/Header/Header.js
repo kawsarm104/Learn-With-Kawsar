@@ -63,7 +63,7 @@ const Header = () => {
               Contact
             </NavLink>
 
-            {user? (
+            {user.displayName? (
               <div className="">
                 <Navbar.Text className="wellcome-text">
                   Wellcome:{user?.displayName}

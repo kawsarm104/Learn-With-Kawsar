@@ -14,6 +14,7 @@ const Login = () => {
     signInUsingGoogle()
       .then((result) => {
         history.push(location.state?.from || "/home");
+        // console.log(location.state?.from,"google er te");
         setUser(result.user);
       })
       .finally(() => setIsLoading(false));
@@ -22,6 +23,7 @@ const Login = () => {
     signInUsingFacebook()
       .then((result) => {
         history.push(location.state?.from || "/home");
+        // console.log(location.state?.from, "facebook er te");
         setUser(result.user);
         // console.log("facebbok user", result.user)
       })
@@ -68,7 +70,10 @@ const Login = () => {
                       value=""
                       id="rememberPasswordCheck"
                     />
-                    <label className="form-check-label" htmlFor="rememberPasswordCheck">
+                    <label
+                      className="form-check-label"
+                      htmlFor="rememberPasswordCheck"
+                    >
                       Remember password
                     </label>
                   </div>

@@ -12,7 +12,9 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) =>
-        user.email ? (
+        // user.email ? ( email dile kam korto na karon facebook email dey na nam dey
+        // tai private route a access e paito na
+        user.displayName ? (
           children
         ) : (
           <Redirect
