@@ -2,10 +2,12 @@ import Button from "@restart/ui/esm/Button";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+
 import "./Service.css";
-const Service = (props) => {
-  // console.log(props.course)
-  const {id, name, image, fees, duration } = props.course;
+const Service = ({ course }) => {
+  // console.log(course)
+  const { id, name, image, fees, duration } = course;
+
   return (
     <div className="col-sm-12 col-md-6 col-lg-3  mt-3 container-fluid ">
       <Card className=" shadow h-100 m-auto ">
@@ -35,6 +37,6 @@ const Service = (props) => {
       </Card>
     </div>
   );
-};
+};;
 
 export default Service;

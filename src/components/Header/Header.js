@@ -1,7 +1,7 @@
 import Button from "@restart/ui/esm/Button";
 import React from "react";
 // import Navbar from "react-bootstrap/Navbar";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
@@ -63,12 +63,12 @@ const Header = () => {
               Contact
             </NavLink>
 
-            {user.displayName? (
+            {user.displayName ? (
               <div className="">
-                <Navbar.Text className="wellcome-text">
+                {/* <Navbar.Text className="wellcome-text">
                   Wellcome:{user?.displayName}
-                </Navbar.Text>
-                
+                </Navbar.Text> */}
+
                 <img
                   src={user.photoURL}
                   className="img-fluid rounded-circle user-image"
@@ -81,7 +81,6 @@ const Header = () => {
                 >
                   Logout
                 </Button>
-                
               </div>
             ) : (
               <NavLink
@@ -92,6 +91,14 @@ const Header = () => {
                 Login
               </NavLink>
             )}
+
+            {/* <NavDropdown
+              className="pe-3"
+              title=""
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
