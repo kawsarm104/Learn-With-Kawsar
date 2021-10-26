@@ -1,8 +1,5 @@
 import React from "react";
-
-
 import useCourses from "../../Hooks/useCourses";
-
 import Service from "./Service";
 
 const Services = () => {
@@ -18,7 +15,6 @@ const Services = () => {
         {courses.map((course) => (
           <Service key={course.id} course={course}></Service>
         ))}
-    
       </div>
     </>
   );

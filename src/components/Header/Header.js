@@ -62,26 +62,41 @@ const Header = () => {
             >
               Contact
             </NavLink>
-
+            
             {user.displayName ? (
-              <div className="">
-                {/* <Navbar.Text className="wellcome-text">
+              <NavDropdown
+                className="me-4 w-25 bg-danger"
+                title={
+                  <img
+                    src={user.photoURL}
+                    className="img-fluid rounded-circle user-image"
+                    alt=""
+                  />
+                }
+                id="basic-nav-dropdown"
+              >
+                <div className="">
+                  {/* <Navbar.Text className="wellcome-text">
                   Wellcome:{user?.displayName}
                 </Navbar.Text> */}
-
-                <img
-                  src={user.photoURL}
-                  className="img-fluid rounded-circle user-image"
-                  alt=""
-                />
-                <Button
-                  className="logout-button"
-                  onClick={logOut}
-                  variant="light"
-                >
-                  Logout
-                </Button>
-              </div>
+{/* 
+                  <img
+                    src={user.photoURL}
+                    className="img-fluid rounded-circle user-image "
+                    alt=""
+                  /> */}
+                  <NavDropdown.Item
+                  className=" bg-warning me-0 pe-0">
+                    <Button
+                      className="logout-button"
+                      onClick={logOut}
+                      // variant="light"
+                    >
+                      Logout
+                    </Button>
+                  </NavDropdown.Item>
+                </div>
+              </NavDropdown>
             ) : (
               <NavLink
                 activeStyle={activeStyles}
@@ -91,6 +106,7 @@ const Header = () => {
                 Login
               </NavLink>
             )}
+            
 
             {/* <NavDropdown
               className="pe-3"
